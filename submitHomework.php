@@ -8,15 +8,15 @@
     $index = null;
     $indexFileName = "";
     if ($book === "4unit") {
-        $filename = "4u" . $chapter . $exercise .".xml";
+        $filename = "files/4u" . $chapter . $exercise .".xml";
         $file = fopen($filename, "w");
-        $indexFile = simplexml_load_file("index4u.xml");
-        $indexFileName = "index4u.xml";
+        $indexFile = simplexml_load_file("files/index4u.xml");
+        $indexFileName = "files/index4u.xml";
     } else {
         $filename = "cam" . $chapter . $exercise . ".xml";
         $file = fopen($filename, "w");
-        $index = simplexml_load_file("indexCam.xml");
-        $indexFileName = "indexCam.xml";
+        $index = simplexml_load_file("files/indexCam.xml");
+        $indexFileName = "files/indexCam.xml";
     }
 
     fwrite($file, $data);
@@ -34,5 +34,5 @@
     }
     $index->asXml($indexFileName);
     fclose($file);
-    
+
 ?>
