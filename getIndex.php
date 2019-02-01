@@ -1,5 +1,7 @@
 <?php
-    header("Acces-Control-Allow-Origin : *");
+    //echo "test2";
+    header("Content-Type: application/xml");
+    header("Access-Control-Allow-Origin: *");
     $book = $_REQUEST["book"];
     $filename = "";
     if ($book == "4unit") {
