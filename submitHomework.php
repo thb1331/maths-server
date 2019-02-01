@@ -1,6 +1,7 @@
 <?php
-    header("Acces-Control-Allow-Origin : *");
     header("Content-Type: text/plain");
+    //header("Access-Control-Allow-Origin : *");
+    echo("test");
     $chapter = $_POST["chap"];
     $exercise = $_POST["ex"];
     $book = $_POST["book"];
@@ -35,5 +36,4 @@
     }
     $index->asXml($indexFileName);
     fclose($file);
-    echo "success";
 ?>
